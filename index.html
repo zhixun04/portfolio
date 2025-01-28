@@ -5,72 +5,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pey Zhi Xun's Portfolio</title>
     <style>
+        /* General Styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
         }
-        header {
+
+        /* Navigation Bar */
+        nav {
             background-color: #333;
-            color: #fff;
-            padding: 1rem 0;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #f4f4f9;
+        }
+        .nav-links {
+            display: flex;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        section:nth-child(odd) {
+            background-color: #fff;
+        }
+        section:nth-child(even) {
+            background-color: #f4f4f9;
+        }
+        h1, h2 {
             text-align: center;
         }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
+
+        /* Project Cards */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
-        .project {
-            margin-bottom: 30px;
+        .project-card {
+            background: white;
+            border-radius: 10px;
             padding: 20px;
-            background: #fff;
-            border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
         }
-        .project h3 {
-            margin: 0;
+        .project-card:hover {
+            transform: scale(1.05);
         }
-        .project p {
-            margin: 5px 0 15px;
+        .project-card img {
+            width: 100%;
+            border-radius: 10px;
+            height: auto;
         }
+        .project-card h3 {
+            margin: 10px 0;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
-            padding: 10px;
-            background: #333;
-            color: #fff;
-            margin-top: 20px;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        footer a {
+            color: #f4f4f9;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <header>
+    <nav>
+        <div><a href="#home">Home</a></div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header id="home">
         <h1>Pey Zhi Xun's Portfolio</h1>
+        <p>Welcome to my personal portfolio! Here you’ll find my projects, skills, and experiences.</p>
     </header>
 
-    <div class="container">
-        <section>
-            <h2>About Me</h2>
-            <p>Hello! I’m Pey Zhi Xun, a diploma student specializing in Information Technology. I love designing intuitive websites and applications using tools like Figma, and I’m passionate about creating impactful and user-friendly solutions.</p>
-        </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I’m Pey Zhi Xun, a diploma student specializing in Information Technology at Ngee Ann Polytechnic. I’m passionate about leadership, designing user-friendly applications, and creating impactful solutions using tools like Figma. My journey has been shaped by hands-on projects and knowledge-building opportunities.</p>
+    </section>
 
-        <section>
-            <h2>Projects</h2>
-            <div class="project">
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="PawPal App">
                 <h3>PawPal - Mental Wellness App</h3>
-                <p>A self-care app designed with gamification features to encourage mental wellness through mood tracking and virtual pet companions. Designed using Figma.</p>
-                <a href="https://github.com/zhixun04" target="_blank">View Project on GitHub</a>
+                <p>A self-care app with gamified features to encourage mental wellness. Designed using Figma.</p>
+                <a href="https://github.com/zhixun04" target="_blank">View Project</a>
             </div>
-            <div class="project">
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="KBDS 2021">
                 <h3>Knowledge Building Design Studio</h3>
-                <p>Collaborated on projects to tackle real-world challenges like sustainability using Knowledge Forum.</p>
+                <p>Collaborated on sustainability projects and presented prototypes to experts.</p>
+                <a href="https://github.com/zhixun04" target="_blank">View Details</a>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you’d like to get in touch, feel free to reach out through any of the platforms below!</p>
+        <p>Email: <a href="mailto:zhixun04@example.com">zhixun04@example.com</a></p>
+        <p>GitHub: <a href="https://github.com/zhixun04" target="_blank">github.com/zhixun04</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a></p>
+    </section>
 
     <footer>
-        <p>Connect with me on <a href="https://linkedin.com/in/yourlinkedin" target="_blank" style="color: #ccc;">LinkedIn</a> | View My Work on <a href="https://github.com/zhixun04" target="_blank" style="color: #ccc;">GitHub</a></p>
+        <p>© 2025 Pey Zhi Xun. All rights reserved.</p>
     </footer>
 </body>
 </html>
